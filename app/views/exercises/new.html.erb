@@ -1,0 +1,13 @@
+<% form_for(@exercise) do |f| %>
+  <fieldset>
+    <legend>Add exercise</legend>
+    <%= f.error_messages %> 
+    <div> 
+      <%= f.label :name %>
+      <%= f.text_field :name %> 
+    </div>  
+    <div> 
+        <%= f.submit "Create" %> 
+    </div>
+  </fieldset>
+<% end %>

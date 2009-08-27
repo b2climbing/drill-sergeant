@@ -1,0 +1,6 @@
+label {
+  display: block;
+}
+.fieldWithErrors input {
+  border: 2px solid red;
+}

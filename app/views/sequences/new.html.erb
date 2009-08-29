@@ -1,0 +1,13 @@
+<% form_for(@sequence) do |f| %>
+  <fieldset>
+    <legend>Add sequence</legend>
+    <%= f.error_messages %> 
+    <div> 
+      <%= f.label :name %>
+      <%= f.text_field :name %> 
+    </div>  
+    <div> 
+        <%= f.submit "Create" %> 
+    </div>
+  </fieldset>
+<% end %>

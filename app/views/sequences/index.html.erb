@@ -1,0 +1,9 @@
+<table>
+  <tr><th>Name</th></tr>
+  <% @sequences.each do |sequence| %>
+    <tr>
+      <td><%= link_to sequence.name, edit_sequence_path(sequence) %></td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to 'New Sequence', new_sequence_path %>

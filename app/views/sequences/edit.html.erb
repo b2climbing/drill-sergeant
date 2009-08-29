@@ -1,0 +1,21 @@
+<% form_for(@sequence) do |f| %>
+  <fieldset>
+    <legend>Edit sequence</legend>
+    <%= f.error_messages %> 
+    <div> 
+      <%= f.label :name %>
+      <%= f.text_field :name %> 
+    </div>  
+    <div> 
+        <%= f.submit "Save" %> 
+    </div>
+  </fieldset>
+<% end %>
+
+<ul id='exercises'>
+  <% @sequence.sequence_exercises.ordered.each do |sequence_exercise| -%>
+  <li id='exercise_<%=sequence_exercise.id %>'><%= sequence_exercise.exercise.name %></li>
+  <% end -%>
+</ul>
+
+<%= sortable_element("exercises", :url => { :action => "order" }) %>

@@ -11,6 +11,17 @@ class SequencesController < ApplicationController
   def edit
     @sequence = Sequence.find(params[:id])
   end
+  
+  def create
+    @sequence = Sequence.new(params[:sequence])
+    if @sequence.valid?
+      @sequence.save
+      flash[:notice] = 'Sequence created'
+      redirect_to :action => :index
+    else
+      render :action => :new
+    end
+  end
 
   def order
     params[:exercises].each_with_index do |order, index|

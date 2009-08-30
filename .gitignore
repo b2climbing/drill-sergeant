@@ -1,3 +1,4 @@
 log/*.log
 db/development.sqlite3
 test/factories.rb
+db/test.sqlite3

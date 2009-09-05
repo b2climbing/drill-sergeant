@@ -1,0 +1,11 @@
+<div class='exerciseEdit'>
+  <h4><%= sequence_exercise.exercise.name %></h4>
+  <% form_remote_for sequence_exercise do |f| %>
+    <%= f.label :repetitions %>
+    <%= f.text_field :repetitions, :size => 4 %>
+    <%= f.label :time %>
+    <%= f.datetime_select :time, :include_seconds => true, :discard_year => 1, :discard_month => 1, :discard_day => 1,
+                            :prompt => true %>
+    <%= f.submit%>
+  <% end %>
+</div>

@@ -12,6 +12,17 @@ class SequencesController < ApplicationController
     @sequence = Sequence.find(params[:id])
   end
   
+  def show
+    @sequence = Sequence.find(params[:id])
+  end
+  
+  def update
+    @sequence = Sequence.find(params[:id])
+    @sequence.update_attributes!(params[:sequence])
+    flash[:notice] = 'Sequence updated'
+    redirect_to :action => :edit
+  end
+  
   def create
     @sequence = Sequence.new(params[:sequence])
     if @sequence.valid?

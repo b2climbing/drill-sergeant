@@ -5,7 +5,11 @@
     <div> 
       <%= f.label :name %>
       <%= f.text_field :name %> 
-    </div>  
+    </div>
+    <div> 
+      <%= f.label :time %>
+      <%= select_time 0,  :include_seconds => true %> 
+    </div>
     <div> 
         <%= f.submit "Create" %> 
     </div>

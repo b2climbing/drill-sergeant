@@ -14,7 +14,9 @@
 
 <ul id='exercises'>
   <% @sequence.sequence_exercises.ordered.each do |sequence_exercise| -%>
-  <li id='exercise_<%=sequence_exercise.id %>'><%= sequence_exercise.exercise.name %></li>
+  <li id='exercise_<%=sequence_exercise.id %>'>
+    <%= render :partial => 'exercise_edit', :locals => {:sequence_exercise => sequence_exercise }%>
+  </li>
   <% end -%>
 </ul>
 

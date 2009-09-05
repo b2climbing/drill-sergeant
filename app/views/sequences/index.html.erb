@@ -1,8 +1,12 @@
 <table>
-  <tr><th>Name</th></tr>
+  <tr>
+    <th>Name</th>
+    <th>Actions</th>
+  </tr>
   <% @sequences.each do |sequence| %>
     <tr>
-      <td><%= link_to sequence.name, edit_sequence_path(sequence) %></td>
+      <td><%= link_to sequence.name, sequence_path(sequence) %></td>
+      <td><%= link_to '[Edit]', edit_sequence_path(sequence) %></td>
     </tr>
   <% end %>
 </table>

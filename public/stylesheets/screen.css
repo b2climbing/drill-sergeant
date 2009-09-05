@@ -1,6 +1,15 @@
 label {
   display: block;
 }
+ul#exercises {
+	list-style: none inside
+}
+ul#exercises li {
+  margin-bottom: 10px;
+  padding: 5px;
+	border: 1px solid grey;
+	background-color: #B6D3EA;
+}
 .fieldWithErrors input {
   border: 2px solid red;
 }

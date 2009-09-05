@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090829073808) do
+ActiveRecord::Schema.define(:version => 20090831073948) do
 
   create_table "exercises", :force => true do |t|
     t.string   "name"
@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(:version => 20090829073808) do
     t.integer "sequence_id"
     t.integer "exercise_id"
     t.integer "exercise_order"
+    t.integer "repetitions"
+    t.time    "time"
   end
 
   create_table "sequences", :force => true do |t|

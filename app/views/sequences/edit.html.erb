@@ -12,12 +12,12 @@
   </fieldset>
 <% end %>
 
+<div id='exercise-list'>
+  <%= render :partial => 'exercise_list' %>
+</div>
+
 <% form_remote_tag :url => { :action => :add_exercise, :id => @sequence.id } do %>
   <%= select_tag :exercise, options_for_select(@exercises.collect{|exercise| [exercise.name, exercise.id]}) %>
   <%= submit_tag 'Add exercise' %>
 <% end -%>
-
-<div id='exercise-list'>
-  <%= render :partial => 'exercise_list' %>
-</div>
 

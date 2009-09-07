@@ -13,8 +13,7 @@ ActiveRecord::Schema.define(:version => 20090831073948) do
 
   create_table "exercises", :force => true do |t|
     t.string   "name"
-    t.integer  "repetitions"
-    t.integer  "time"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

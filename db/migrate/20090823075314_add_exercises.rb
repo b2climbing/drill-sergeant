@@ -2,7 +2,7 @@ class AddExercises < ActiveRecord::Migration
   def self.up
     create_table :exercises, :force => true do |t|
       t.string :name
-      t.integer :repetitions, :time
+      t.text :description
       t.timestamps
     end
   end

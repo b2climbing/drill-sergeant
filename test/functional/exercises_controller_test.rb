@@ -16,7 +16,7 @@ class ExercisesControllerTest < ActionController::TestCase
   
   context "when creating a new exercise" do
     setup do
-      post :create, :exercise => {:name => '1000 Sit-ups'}
+      post :create, :exercise => {:name => 'Sit-up'}
     end
     
     should_set_the_flash_to('Exercise created')

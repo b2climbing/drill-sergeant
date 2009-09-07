@@ -35,13 +35,6 @@ class SequencesController < ApplicationController
     end
   end
 
-  def order
-    params[:exercises].each_with_index do |order, index|
-      SequenceExercise.find(order.to_i).update_attribute(:exercise_order, index)
-    end
-    render :nothing => true
-  end
-
   def add_exercise
     sequence_exercise = SequenceExercise.new(:sequence_id => params[:id], :exercise_id => params[:exercise])
     sequence_exercise.save

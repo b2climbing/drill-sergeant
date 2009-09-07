@@ -4,5 +4,5 @@
     <%= render :partial => 'exercise_edit', :locals => {:sequence_exercise => sequence_exercise }%>
   </li>
   <% end -%>
-  <%= sortable_element("exercises", :url => { :action => "order" }) %>
+  <%= sortable_element("exercises", :url => { :controller => 'sequence_exercises', :action => "order" }) %>
 </ul>

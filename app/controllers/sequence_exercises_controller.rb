@@ -9,7 +9,11 @@ class SequenceExercisesController < ApplicationController
     params[:exercises].each_with_index do |order, index|
       SequenceExercise.find(order.to_i).update_attribute(:exercise_order, index)
     end
-    render :nothing => true
+    if request.xhr?
+      render :nothing => true
+    else
+      redirect_to :controller => params[:redirect][:controller], :action => params[:redirect][:action]
+    end
   end
 
   private

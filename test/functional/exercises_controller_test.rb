@@ -11,6 +11,7 @@ class ExercisesControllerTest < ActionController::TestCase
     
     should "show all exercises" do
       assert_select "td", @exercise.name
+      assert_select "td", @exercise.description
     end
   end
   

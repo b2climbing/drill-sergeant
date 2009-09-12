@@ -5,6 +5,9 @@
   margin-bottom: 10px;
   padding: 5px;
 }
+ul {
+  list-style-type: none;
+}
 label {
   display: block;
 }

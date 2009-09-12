@@ -18,13 +18,13 @@
         <ul>
           <li><strong>Exercises</strong></li>
           <ul>
-            <li><%= link_to 'Show all', exercises_path %></li>
-            <li><%= link_to 'Create new', new_exercise_path %></li>
+            <li><%= link_to_unless_current 'Show all', exercises_path %></li>
+            <li><%= link_to_unless_current 'Create new', new_exercise_path %></li>
           </ul>
           <li><strong>Sequences</strong></li>
           <ul>
-            <li><%= link_to 'Show all', sequences_path %></li>
-            <li><%= link_to 'Create new', new_sequence_path %></li>
+            <li><%= link_to_unless_current 'Show all', sequences_path %></li>
+            <li><%= link_to_unless_current 'Create new', new_sequence_path %></li>
           </ul>
         </ul>
       </div>

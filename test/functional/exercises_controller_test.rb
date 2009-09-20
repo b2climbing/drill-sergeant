@@ -23,7 +23,7 @@ class ExercisesControllerTest < ActionController::TestCase
     should_set_the_flash_to('Exercise created')
     
     should "create new exercise in database" do
-      assert Exercise.find_by_name('1000 Sit-ups')
+      assert Exercise.find_by_name('Sit-up')
     end
   end
 

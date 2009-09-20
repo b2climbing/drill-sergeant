@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090831073948) do
+ActiveRecord::Schema.define(:version => 20090919211851) do
 
   create_table "exercises", :force => true do |t|
     t.string   "name"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(:version => 20090831073948) do
     t.integer "exercise_id"
     t.integer "exercise_order"
     t.integer "repetitions"
-    t.time    "time"
+    t.integer "time"
   end
 
   create_table "sequences", :force => true do |t|
